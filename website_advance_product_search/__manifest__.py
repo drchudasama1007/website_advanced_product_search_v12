@@ -18,7 +18,7 @@ This module allows to search product by automatic in search box and redirect to 
         """,
 
     'author': 'Odoo Helper',
-    # 'license': 'AGPL-3',
+    'license': 'AGPL-3',
 
     'depends': [
         'website_sale'
