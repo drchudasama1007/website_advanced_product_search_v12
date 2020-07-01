@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Odoo Helper: Inherited Assets Front-end to add css and js file -->
+    <template id="assets_frontend" name="odoohelper assets" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/website_advance_product_search/static/src/js/advance_product_search.js"></script>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="inherit_search" inherit_id="website.website_search_box">
+        <xpath expr="//input[hasclass('search-query')]" position="after">
+            <div id="product_search_results"/>
+        </xpath>
+    </template>
+
+    <template id="productsSearchBarSolution">
+        <div class="dropdown-menu show w-100">
+            <a t-foreach="products" t-as="product"
+               t-att-href="product['website_url']" class="dropdown-item p-2 text-wrap">
+                <div class="media align-items-center o_search_product_item">
+                    <img t-attf-src="/web/image/product.template/#{product['id']}/image_medium"
+                         class="flex-shrink-0 o_image_64_contain" style="width:10%"/>
+                    <div class="media-body px-3">
+                        <h6 style="font-size: 12px;" t-esc="product['name']"/>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <b class="text-nowrap" style="font-size: 12px;">
+                            <t t-raw="product['list_price']"/>
+                        </b>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </template>
+
+</odoo>
