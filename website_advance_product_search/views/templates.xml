@@ -7,20 +7,24 @@
         </xpath>
     </template>
 
-    <template id="productsSearchBarSolution">
-        <div class="dropdown-menu show w-100">
+   <template id="productsSearchBarSolution">
+        <div class="dropdown-menu show w-100" style="width: 100%;">
             <a t-foreach="products" t-as="product"
                t-att-href="product['website_url']" class="dropdown-item p-2 text-wrap">
                 <div class="media align-items-center o_search_product_item">
-                    <img t-attf-src="/web/image/product.template/#{product['id']}/image_medium"
-                         class="flex-shrink-0 o_image_64_contain" style="width:10%"/>
-                    <div class="media-body px-3">
-                        <h6 style="font-size: 12px;" t-esc="product['name']"/>
-                    </div>
-                    <div class="flex-shrink-0">
-                        <b class="text-nowrap" style="font-size: 12px;">
-                            <t t-raw="product['list_price']"/>
-                        </b>
+                    <div class="row" style="margin-left: 0;margin-right: 0;">
+                        <div class="col-md-3 col-sm-3 col-3 col-xs-3">
+                            <img t-attf-src="/web/image/product.template/#{product['id']}/image_medium"
+                                 class="flex-shrink-0 o_image_64_contain" style="width:100%"/>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6 col-xs-6">
+                            <h6 style="font-size: 12px;" t-esc="product['name']"/>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-3 col-xs-3" style="margin-top: 5px;">
+                            <b class="text-nowrap" style="font-size: 12px;">
+                                <t t-raw="product['list_price']"/>
+                            </b>
+                        </div>
                     </div>
                 </div>
             </a>
