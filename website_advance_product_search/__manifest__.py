@@ -28,7 +28,7 @@ This module allows to search product by automatic in search box and redirect to 
         'views/templates.xml'
     ],
     'images': ['images/OdooHelper.jpg'],
-    'price': 4.0,
+    'price': 5.0,
     'currency': 'USD',
 
     'installable': True,
